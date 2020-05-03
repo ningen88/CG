@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\opengl",
+    "\\opengl\\res",
+    "\\opengl\\res\\shaders",
+    "\\opengl\\vendor",
+    "\\opengl\\vendor\\stb_image",
+    "\\opengl\\x64"
+  ],
+  "SelectedNode": "\\opengl\\texture.cpp",
+  "PreviewInSolutionExplorer": false
+}

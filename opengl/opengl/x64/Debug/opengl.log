@@ -1,0 +1,5 @@
+﻿  stb_image.cpp
+LINK : warning LNK4098: la libreria predefinita 'MSVCRT' è in conflitto con l'utilizzo di altre librerie; usare /NODEFAULTLIB:libreria
+LINK : warning LNK4098: la libreria predefinita 'LIBCMT' è in conflitto con l'utilizzo di altre librerie; usare /NODEFAULTLIB:libreria
+glew32s.lib(glew.obj) : warning LNK4099: impossibile trovare il PDB 'vc120.pdb' con 'glew32s.lib(glew.obj)' o in 'C:\Users\candi\OneDrive\Desktop\V_Studio_Source\opengl\x64\Debug\vc120.pdb'; oggetto collegato senza informazioni di debug
+  opengl.vcxproj -> C:\Users\candi\OneDrive\Desktop\V_Studio_Source\opengl\x64\Debug\opengl.exe
