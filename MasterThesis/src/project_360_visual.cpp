@@ -1,5 +1,5 @@
-#include "project_360_visual.h"
-#include "projection.h"
+#include <project_360_visual.h>
+#include <projection.h>
 #include <iostream>
 
 template <typename T> string tostr(T&  t) {
@@ -35,21 +35,12 @@ void vecToMat(vector<double> i1, Mat& M) {
 	}
 }
 
-int main(){
-//	setNumThreads(8);
+int main(int argc, char **argv){
 
 	cout << "OpenCV version: " << CV_VERSION << endl;
 
 	
-	string input1 = "doi360_4K.mp4";
-	string input2 = "LondonPark.mp4";
-	string input3 = "doi360_raw.mp4";	
-	string input4 = "londonBridge.mp4";
-	string input5 = "doi360_540p.mp4";
-
-	string sc1 = "scenario5.avi";
-	string sc2 = "scenario3.avi";
-	string sc3 = "scenario4.avi";
+	string input1(argv[1]);;
 
 
 	namedWindow("SHW", WINDOW_AUTOSIZE);
