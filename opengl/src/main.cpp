@@ -82,13 +82,21 @@ int main(void){
    
     IndexBuffer ib(indices,6);                                             //create an IndexBuffer object
 
+#ifdef RESOURCE_FOLDER
+    Shader shader(RESOURCE_FOLDER "shaders/basic.shader");                  
+#else
     Shader shader("res/shaders/basic.shader");                             //load the file and create the shader
+#endif
     shader.bind();                                                         //bind the shader using the glUseProgram function and install it as part of current rendering state
     shader.setUniform4f("u_color", 0.5f, 0.1f, 0.1f, 1.0f);                //specify the value of the uniform variable, in this case the color
 
     shader.setUniformMat4f("u_MVP", proj);                                 //specify the value of the uniform variable, in this case the projection matrix
 
+#ifdef RESOURCE_FOLDER
+    Texture texture(RESOURCE_FOLDER "textures/avatar_1.png");
+#else
     Texture texture("res/textures/avatar_1.png");                          //load the image and create the texture
+#endif
     texture.bind();                                                        //bind the texture using glBindTexture function and give it a texture slot (default 0)
     shader.setUniform1i("u_texture", 0);                                   //specify the value of the uniform variable, in this case the texture in slot 0
     
